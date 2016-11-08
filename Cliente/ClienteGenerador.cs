@@ -35,8 +35,9 @@ namespace Cliente
             var textos = _generador.GenerarTextos(cantidad, data);
             sw.Stop();
 
-            Console.WriteLine(string.Format("\nGeneracion Terminada.\nDuración: {0}\nOprima cualquier tecla para publicar", sw.Elapsed));
-            Console.ReadKey();
+            Console.WriteLine(string.Format("\nGeneracion Terminada.\nDuración: {0}\nOprima cualquier tecla para publicar...", sw.Elapsed));
+            Console.ReadKey();            
+            Console.WriteLine(string.Format("Programando Envio de peticiones.", sw.Elapsed));
 
             sw.Reset();
             sw.Start();

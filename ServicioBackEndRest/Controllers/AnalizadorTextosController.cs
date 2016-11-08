@@ -11,6 +11,12 @@ namespace ServicioBackEndRest.Controllers
     {
         private Transversal.IServicioAnalizadorTexto _analizador;
         private static int totalCount = 0;
+        private static System.Diagnostics.Stopwatch sw;
+
+        static AnalizadorTextosController()
+        {
+            //sw = System.Diagnostics.Stopwatch.StartNew();
+        }
 
         public AnalizadorTextosController(Transversal.IServicioAnalizadorTexto analizador)
         {
@@ -23,6 +29,7 @@ namespace ServicioBackEndRest.Controllers
             return new string[] { "value1", "value2" };
         }
 
+
         // GET: api/AnalizadorTextos/5
         public string Get(int id)
         {
@@ -32,11 +39,7 @@ namespace ServicioBackEndRest.Controllers
         // POST: api/AnalizadorTextos
         public void Post(Transversal.Entidades.DatosAnalisisTexto value)
         {
-            _analizador.Analizar(value);
-            System.Threading.Interlocked.Add(ref totalCount, 1);
-            if (totalCount >= 20000)
-                totalCount = totalCount;
-
+            _analizador.Analizar(value);            
         }
 
         // PUT: api/AnalizadorTextos/5

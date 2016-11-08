@@ -1,19 +1,26 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 
 namespace AnalizadorTexto
 {
     public class ReporteEstadisticasADisco : IRepositorioResultadoAnalisisTexto
     {
-        // Estos parametros deberian estar en un archivo de configuración u otro repositorio
-        // pero por simplicidad en la prueba los dejo quemados aca.
-        private const string RUTAARCHIVOS = @"C:\Temp\PruebaEquitel\";
-        private const string NOMBREARCHIVO = "Resultados_{0}_{1}.txt";
+        private static string _rutaArchivos = @"C:\Temp\PruebaEquitel\";
+        private static string _nombreArchivo = "Resultados_{0}_{1}.txt";
 
         static ReporteEstadisticasADisco()
         {
-            if (!System.IO.Directory.Exists(RUTAARCHIVOS))
+            _rutaArchivos = System.Configuration.ConfigurationManager.AppSettings["RUTAARCHIVOS"];
+            if (string.IsNullOrEmpty(_rutaArchivos))
+                throw new Exception("Se debe configurar la ruta de guardado de los archivos bajo el appSetting RUTAARCHIVOS");
+
+            _nombreArchivo = System.Configuration.ConfigurationManager.AppSettings["NOMBREARCHIVO"];
+            if (string.IsNullOrEmpty(_nombreArchivo))
+                throw new Exception("Se debe configurar el formato de nombre de los archivos bajo el appSetting NOMBREARCHIVO");
+
+            if (!System.IO.Directory.Exists(_rutaArchivos))
             {
-                System.IO.Directory.CreateDirectory(RUTAARCHIVOS);
+                System.IO.Directory.CreateDirectory(_rutaArchivos);
             }
         }
 
@@ -21,7 +28,7 @@ namespace AnalizadorTexto
         {
             Task.Factory.StartNew(() =>
                 {
-                    using (var archivo = new System.IO.StreamWriter(System.IO.Path.Combine(RUTAARCHIVOS, string.Format(NOMBREARCHIVO, datos.IdCliente, datos.IdPeticion))))
+                    using (var archivo = new System.IO.StreamWriter(System.IO.Path.Combine(_rutaArchivos, string.Format(_nombreArchivo, datos.IdCliente, datos.IdPeticion))))
                     {
                         archivo.WriteLine("ESTADISTICAS");
                         archivo.Write("Palabras Terminadas en con la letra n: ");
@@ -38,4 +45,4 @@ namespace AnalizadorTexto
                 });
         }
     }
-}
+}   
