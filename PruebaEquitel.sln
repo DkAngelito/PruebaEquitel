@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cliente", "Cliente\Cliente.csproj", "{0FEFA269-ED01-4EBE-A367-4D1BEDBAFA8E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Cliente", "1.Cliente", "{17EE449F-E65E-46F5-B324-D301C904F3B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneradorTextos", "Contratos\GeneradorTextos.csproj", "{C59AD6DD-20BB-47E1-9AED-C4692AF5BA36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnalizadorTexto", "AnalizadorTexto\AnalizadorTexto.csproj", "{1C4CD430-A669-4D62-AF2D-E6B1AEAB0358}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.Backend", "2.Backend", "{DF418603-54E0-490C-BCA8-5A01DCD08526}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.Transversal", "3.Transversal", "{9A2DD294-AB37-450A-872B-94F0778DA880}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transversal", "Transversal\Transversal.csproj", "{4D987C2A-05DE-46EE-86BF-1401A5D8F3D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServicioBackEndRest", "ServicioBackEndRest\ServicioBackEndRest.csproj", "{9FE9CA74-B3A9-4F1E-9D4C-21503FBE8C38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FEFA269-ED01-4EBE-A367-4D1BEDBAFA8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FEFA269-ED01-4EBE-A367-4D1BEDBAFA8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FEFA269-ED01-4EBE-A367-4D1BEDBAFA8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FEFA269-ED01-4EBE-A367-4D1BEDBAFA8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C59AD6DD-20BB-47E1-9AED-C4692AF5BA36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C59AD6DD-20BB-47E1-9AED-C4692AF5BA36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C59AD6DD-20BB-47E1-9AED-C4692AF5BA36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C59AD6DD-20BB-47E1-9AED-C4692AF5BA36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C4CD430-A669-4D62-AF2D-E6B1AEAB0358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C4CD430-A669-4D62-AF2D-E6B1AEAB0358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C4CD430-A669-4D62-AF2D-E6B1AEAB0358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C4CD430-A669-4D62-AF2D-E6B1AEAB0358}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D987C2A-05DE-46EE-86BF-1401A5D8F3D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D987C2A-05DE-46EE-86BF-1401A5D8F3D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D987C2A-05DE-46EE-86BF-1401A5D8F3D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D987C2A-05DE-46EE-86BF-1401A5D8F3D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FE9CA74-B3A9-4F1E-9D4C-21503FBE8C38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FE9CA74-B3A9-4F1E-9D4C-21503FBE8C38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FE9CA74-B3A9-4F1E-9D4C-21503FBE8C38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FE9CA74-B3A9-4F1E-9D4C-21503FBE8C38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0FEFA269-ED01-4EBE-A367-4D1BEDBAFA8E} = {17EE449F-E65E-46F5-B324-D301C904F3B1}
+		{C59AD6DD-20BB-47E1-9AED-C4692AF5BA36} = {17EE449F-E65E-46F5-B324-D301C904F3B1}
+		{1C4CD430-A669-4D62-AF2D-E6B1AEAB0358} = {DF418603-54E0-490C-BCA8-5A01DCD08526}
+		{4D987C2A-05DE-46EE-86BF-1401A5D8F3D4} = {9A2DD294-AB37-450A-872B-94F0778DA880}
+		{9FE9CA74-B3A9-4F1E-9D4C-21503FBE8C38} = {DF418603-54E0-490C-BCA8-5A01DCD08526}
+	EndGlobalSection
+EndGlobal
